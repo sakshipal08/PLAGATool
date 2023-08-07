@@ -1,0 +1,272 @@
+HOME.HTML
+{% extends 'base.html' %} {% block pagetitle %} Plant Disease Detection {% endblockpagetitle %} {% block body %}
+<style>
+    .avatar {
+        margin-top: 20px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        background-color: white;
+        overflow: hidden;
+    }
+    
+    input[type='file'] {
+        color: transparent;
+    }
+    
+    body {
+        overflow-x: hidden;
+    }
+</style>
+
+<divclass="row mb-5 text-center text-white laptop">
+    <divclass="col-lg-10 mx-auto">
+        <imgsrc="assets/images/logo-1-1.png"class="avatar">
+
+        <h1class="display-4"style="padding-top: 2%;font-weight: 300;color: rgb(4, 54, 4);"><b>🍁Smart College Assignment <br>Plagiarism Detector🍁</b></h1>
+        <pclass="lead"style="font-weight: 500;color: black;">This AI Engine Will Help To Detect Plagiarism From the College Assignments</p>
+    </div>
+</div>
+
+<centerclass="laptop">
+
+    <!--<button class="bttn-pill bttn-lgbtn-success" style="margin-right: 20px; visibility: hidden;"><b style="color: black; ">Google Drive</b></button> -->
+
+    <buttonclass="bttn-pill bttn-lgbtn-success"><bstyle="color: black;">
+        <inputstyle="width: 8px;"type="file"id="FileUpload"onchange="selectFolder(event)"webkitdirectorymozdirectorymsdirectoryodirectorydirectorymultiple/>
+
+Select Assignment Folder</b></button>
+
+    <br>
+    <br>
+    <br>
+
+    <style>
+        table {
+            font-family: 'Arial';
+            margin: 25pxauto;
+            border-collapse: collapse;
+            border: 1pxsolid#eee;
+            border-bottom: 2pxsolid#00cccc;
+            box-shadow: 0px0px20pxrgba(0, 0, 0, 0.1), 0px10px20pxrgba(0, 0, 0, 0.05), 0px20px20pxrgba(0, 0, 0, 0.05), 0px30px20pxrgba(0, 0, 0, 0.05);
+        }
+        
+        tabletr:hover {
+            background: #f4f4f4;
+        }
+        
+        tabletr:hovertd {
+            color: #555;
+        }
+        
+        tableth,
+        tabletd {
+            color: #999;
+            border: 1pxsolid#eee;
+            padding: 12px35px;
+            border-collapse: collapse;
+        }
+        
+        tableth {
+            text-align: center;
+            background: white;
+            color: black;
+            text-transform: uppercase;
+            font-size: 20px;
+        }
+        
+        tableth.last {
+            border-right: none;
+        }
+    </style>
+
+    <tableid="listAssignments"style="visibility: hidden;">
+        <thead>
+            <tr>
+                <th>Assignment List</th>
+            </tr>
+        </thead>
+        <tbodyid="listAssignmentsBody"style="align-items: center; align-content: center;text-align: center; color: black; background-color: white;">
+
+        </tbody>
+    </table>
+
+
+    <divid="algorithm"style="visibility: hidden;">
+        <h1class="display-4"style="padding-top: 2%;font-weight: 300;color: rgb(1, 34, 1); font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;"><b>⚙️ Select Algorithm ⚙️</b></h1>
+        <br>
+
+        <formaction="/checkPlagiarismSklearn"method="post">
+            <buttonclass="bttn-pill bttn-lgbtn-success"style="margin-right: 20px;"><bstyle="color: black; ">Array Matrix</b></button>
+        </form>
+        <br>
+
+        <!--        <form action="/checkPlagiarismNLP" method="post">-->
+        <!--            <button class="bttn-pill bttn-lgbtn-success" style="margin-right: 20px; visibility:hidden;"><b style="color: black; ">NLP Cosine Similarity</b></button>-->
+        <!--        </form>-->
+        <!--        <br>-->
+
+        <formaction="/checkPlagiarismSklearn"method="post">
+            <buttonclass="bttn-pill bttn-lgbtn-success"style="margin-right: 20px;"><bstyle="color: black; ">Sklearn Cosine Similarity</b></button>
+        </form>
+
+    </div>
+
+    <br>
+    <br>
+
+</center>
+
+<scriptsrc="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<scripttype="text/javascript">
+    functionselectFolder(e) {
+        vartheFiles = e.target.files;
+        console.log(theFiles);
+        vartable = document.getElementById('listAssignments');
+        varalgorithm = document.getElementById('algorithm');
+        table.style.visibility = 'visible';
+        algorithm.style.visibility = 'visible';
+
+        varlistAssignmentsBody = document.getElementById('listAssignmentsBody');
+
+        for (letindex = 0; index<theFiles.length; ++index) {
+            constelement = theFiles[index];
+            varrow = document.createElement("tr");
+            varcell = document.createElement("td");
+            varcellText = document.createTextNode(element.name);
+            cell.appendChild(cellText);
+            row.appendChild(cell);
+
+            listAssignmentsBody.appendChild(row);
+
+        }
+        table.appendChild(listAssignmentsBody);
+
+
+    }
+</script>
+
+{% endblock body %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+  
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+        
+       
+        
+        
+        
+       
+         
+        
+        
+        
+        
+        
+        
+    
+
+          
+
+                     
+                    
+                               
+                            
+                          
+
+                            
+                           
+
+
+        
+               
+                   
+                    
+                
+                
+                
+                
+                
+               
+               
+                
+                
+                
+                
+                
+
+                    
+                    
+                              
+                                      
+                                
+             
+
+
+
+        
+        
+        
+        
+      
+          
+        
+        
+           
+
+
+
+         
+       
+
+        
+        
+
+    
+
+
+
+    
+    
+      
+      
+        
+
+
+            
+            
+
+      
+
+
+          
+
+      
+        
+
+
+
+          
+
+

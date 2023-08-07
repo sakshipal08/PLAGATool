@@ -1,0 +1,128 @@
+!doctypehtml>
+<htmllang="en">
+
+<head>
+    <metacharset="UTF-8">
+    <title>registration form</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        body:before {
+            content: '';
+            position: fixed;
+            width: 100vw;
+            height: 100vh;
+            background-image: url("assets/images/background/banner-1--1-bg.jpg");
+            background-position: centercenter;
+            
+                background-repeat: no-repeat;
+                background-attachment: fixed;
+                background-size: cover;
+                -webkit-filter: blur(3px);
+                -moz-filter: blur(3px);
+                -o-filter: blur(3px);
+                -ms-filter: blur(3px);
+                filter: blur(3px)
+            }
+            
+            .contact-form {
+                position: absolute;
+                top: 50%;
+                left: 50%;   transform: translate(-50%, -50%);
+                width: 400px;
+                height: 600px;
+                padding: 80px40px;
+                box-sizing: border-box;
+                background: rgba(0, 0, 0, .5);
+            }
+            
+            .avatar {
+                        position: absolute;
+                width: 140px;
+                height: 140px;
+                border-radius: 50%;
+                background-color: white;
+                overflow: hidden;
+                top: calc(-140px/2);
+                left: calc(50% - 80px);
+            }
+        
+            .contact-formh2 {
+                margin: 0;
+                padding: 0020px;
+                color: #fff;
+                text-align: center;
+                text-transform: uppercase;
+            }
+            
+            .contact-formp {
+                margin: 0;
+                padding: 0;
+                font-size: 25px;
+                font-weight: bold;
+                color: #fff;
+            }
+            .contact-forminput {
+                width: 100%;
+                margin-bottom: 20px;
+            }
+            
+            .contact-forminput[type="text"],
+            .contact-forminput[type="password"] {
+                border: none;
+                border-bottom: 1pxsolid#fff;
+                background: transparent;
+                outline: none;
+                height: 40px;
+                color: #fff;
+                font-size: 16px;
+            }.contact-forminput[type="submit"] {
+                height: 50px;
+                color: #fff;
+                font-size: 27px;
+                background: green;
+                cursor: pointer;
+                border-radius: 2px;
+                border-color: white;
+                border: none;
+                outline: none;
+                margin-top: 15%;
+            }
+            
+            .contact-forma {
+                color: #fff;
+                font-size: 12px;
+                font-weight: bold;
+                text-decoration: none;
+            }
+            
+            input[type="checkbox"] {
+                width: 20%;
+            }
+        </style>
+    </head>
+
+    <body>
+        <divclass="contact-form"style="margin-top: 2%;">
+            <imgsrc="assets/images/logo-1-1.png"class="avatar">
+            <h2>Registration Page</h2>
+            <formmethod="POST"action="/registration">
+                <p>Name</p>
+                <inputtype="text"name="username"placeholder="Enter Name">
+                <p>Mobile</p>
+                <inputtype="text"name="mobile"placeholder="Enter Mobile">
+                <p>Email</p>
+                <inputtype="text"name="email"placeholder="Enter Email">
+                <p>Password</p>
+                <inputtype="password"name="password"placeholder="Enter Password">
+                <inputtype="submit"name="sign_up"value="Sign Up"style="height:40px;width:320px;margin-top:1%;"required>
+    
+            </form>
+        </div>
+        </body>
+        
+        </html>
+        
